@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %} 
+ 
+Siparişiniz
+
+{%endblock%}
+
+
+{%block content %}
+{{record_to_show.id}} 
+<br />
+{{record_to_show.name_db}} 
+<br />
+{{record_to_show.email_db}} 
+<br />
+{{record_to_show.dough_db}} 
+<br />
+{{record_to_show.many_db}} adet 
+<br />
+{{record_to_show.time_db}}
+<br />
+{{record_to_show.record_time_db}}
+<br />
+
+<a href="{{url_for('delete_one',id=record_to_show.id)}}">Siparişi İptal Et</a> -
+<a href="{{url_for('update_one',id=record_to_show.id)}}">Siparişi Güncelle</a> 
+
+
+
+{%endblock%}
