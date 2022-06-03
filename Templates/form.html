@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}
+
+FORM
+
+{%endblock%}
+
+
+{%block content %}
+<form method="POST">
+    {{form.hidden_tag()}}
+    <!--secret keyin buradakii karsiligi -->
+
+    {{form.name.label}}<br />
+    {{form.name}} <br />
+
+    {{ form.submit}}
+
+    <br />
+    {% if name_entered %}
+    Girdiğiniz isim : {{name_entered}}
+    {% endif %}
+
+
+
+</form>
+
+
+
+{%endblock%}
