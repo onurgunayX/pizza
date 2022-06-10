@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %} 
+
+Kaydol 
+
+{%endblock%}
+
+
+{%block content %}
+
+<section style="background-color: rgb(56, 170, 151);height: 33vh;">
+    <div class="container" style="height: 90%;">
+      <br/>
+      <form method="POST">
+          {{form.hidden_tag()}}
+          {{form.name.label(class="form-label")}}<br/>
+          {{form.name(class="form-control")}}<br/>
+          {{form.email.label(class="form-label")}}<br/>
+          {{form.email(class="form-control")}}<br/>
+          {{form.password.label(class="form-label")}}<br/>
+          {{form.password(class="form-control")}}<br/>
+          {{form.submit(class="btn btn-outline-primary")}}
+      </form>
+        </div>
+    </div>
+  </section>
+
+{%endblock%}
